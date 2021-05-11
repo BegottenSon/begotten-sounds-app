@@ -1,0 +1,64 @@
+::selection {
+	background-color:  hsl(349, 76%, 36%);
+    color: var(--yellow);
+}
+
+body {
+    --dark: #1a1a1a;
+	--red: #E91B50;
+	--grey: #333735;
+	--white: #EBEBEB;
+    --yellow: rgb(212, 209, 37);
+    --link-hover: #ecacbc;
+    --gradient: linear-gradient(to bottom right, var(--red), rgb(188, 0, 48), rgb(49, 0, 178));
+    --active-gradient: linear-gradient(to bottom right, #f13564, rgb(155, 0, 39), rgb(63, 4, 212));
+    --glassy: linear-gradient(to bottom right, hsla(345, 82%, 51%, 0.5), rgba(212, 209, 37, 0.5));
+    --grey-glass: #333735e8;
+    background-color: var(--dark);
+    color: var(--white);
+    font-family: 'Roboto';
+}
+
+h1 {
+    color: var(--red);
+}
+
+a {
+    color: var(--red);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+p {
+    font-family: Helvetica, sans-serif;
+}
+
+button {
+    background-image: var(--gradient);
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    cursor: pointer;
+    margin-block-end: 1em;
+    padding: 1em 4em;
+    transition: cubic-bezier(.79,.01,.48,1) 100ms;
+}
+
+button:active {
+    background-image: var(--active-gradient);
+    transform: scale(0.95);
+}
+
+.button {
+    background-image: var(--gradient);
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    cursor: pointer;
+    margin-block-end: 1em;
+    padding: 1em 4em;
+    transition: cubic-bezier(.79,.01,.48,1) 100ms;
+}
