@@ -39,14 +39,8 @@
         position: relative;
     }
 
-    .bson:hover {
-        
-    }
-
     .artists {
         height: 40vh;
-        box-shadow: 0 0 4em var(--grey-glass);
-        /* clip-path: circle(40% at 40%); */
     }
 
     .close {
