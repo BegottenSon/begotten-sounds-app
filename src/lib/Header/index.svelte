@@ -76,10 +76,11 @@
             bottom: 0;
             display: flex;
             font-size: 0.7em;
+            left: 0;
             justify-content: space-evenly;
             padding-block: 0.5em 1.4em;
             position: fixed;
-            width: 97%;
+            width: 100%;
         }
 
         ul {
@@ -88,6 +89,10 @@
 
         li a:not(.active a) {
             color: var(--white);
+        }
+
+        .active {
+            color: var(--red);
         }
 
         .active::after {
@@ -106,7 +111,6 @@
         header > a {
             display: flex;
             align-items: center;
-            justify-items: center;
             text-align: center;
         }
     }

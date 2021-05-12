@@ -113,17 +113,42 @@
 </script>
 
 <main>
-    <Controls {isPlaying} {trackTitle} {currentTimeDisplay} {totalTimeDisplay} {progress} 
-        on:playPause={playPause}
-        on:rewind={rewindAudio}
-        on:forward={forwardAudio}/>
-    <BSonPlaylist 
-        on:click={handleTrack}/>
+    <img src="https://res.cloudinary.com/begottenson/image/upload/c_scale,h_300/v1619630123/Begotten%20Sounds/BSon-on-throne_tqtm8x.jpg" alt="Begotten Son">
+    <div>
+        <Controls {isPlaying} {trackTitle} {currentTimeDisplay} {totalTimeDisplay} {progress} 
+            on:playPause={playPause}
+            on:rewind={rewindAudio}
+            on:forward={forwardAudio}/>
+        <BSonPlaylist 
+            on:click={handleTrack}/>    
+    </div>
+    
     
 </main>
 
 <style>
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5em;
+        justify-content: center;
+    }
+
     img {
-        height: 30vh;
+        border-radius: 8px;
+        /* height: 30vh; */
+    }
+
+    div {
+        border: solid 2px var(--grey);
+        border-radius: 8px;
+        padding: 1em;
+        width: 60vw;
+    }
+
+    @media (max-width: 480px) {
+        main {
+            margin-bottom: 2em;
+        }
     }
 </style>

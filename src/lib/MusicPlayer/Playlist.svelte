@@ -17,7 +17,6 @@
         list-style: none;
         margin: 0;
         padding: 0;
-        width: 90vw;
     }
 
     li {
@@ -26,7 +25,6 @@
 		cursor: pointer;
         padding-block: 1em 0.2em;
         text-align: left;
-        width: 100%;
 	}
 
     li:active, li:hover {
