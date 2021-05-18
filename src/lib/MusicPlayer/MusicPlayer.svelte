@@ -120,7 +120,7 @@
             on:rewind={rewindAudio}
             on:forward={forwardAudio}/>
         <BSonPlaylist 
-            on:click={handleTrack}/>    
+            on:click={handleTrack}/>
     </div>
     
     

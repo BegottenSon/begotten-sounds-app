@@ -24,19 +24,21 @@
     {#if begottenMusic}
     <div class="music-view" in:blur="{{amount: blurAmount, duration: duration}}">
         <h3 on:click={showBegottenMusic} class="close button">Close</h3>
-        <MusicPlayer />  
+        <MusicPlayer />
     </div>
     {:else}
     <div class="artists-view" in:blur="{{amount: blurAmount, duration: duration}}">
         <h3>Choose The Artist Below</h3>
-            <section class="bson" on:click={showBegottenMusic}>
+        <div class="artists-list">
+           <section class="bson" on:click={showBegottenMusic}>
                 <h2>D. Brown the Begotten Son</h2>
                 <img src="https://res.cloudinary.com/begottenson/image/upload/c_scale,h_500/v1619630498/Begotten%20Sounds/B_Son_Card_2_yfp0wz.png" alt="Artist D. Brown the Begotten Son" class="artists">
             </section>
-            <section class="bson" on:click={showBegottenMusic}>
+            <section class="tykillzem" on:click={showBegottenMusic}>
                 <h2>Tykillzem</h2>
                 <img src="https://res.cloudinary.com/begottenson/image/upload/c_scale,h_500/v1621343074/Begotten%20Sounds/Ty-web_u1y8y8.png" alt="Tykillzem" class="artists">
-            </section>
+            </section> 
+        </div>        
     </div>     
     {/if}
 </main>
@@ -47,6 +49,13 @@
         display: grid;
         justify-items: center;
         text-align: center;
+    }
+
+    .artists-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        justify-content: center;
     }
 
     .bson {
