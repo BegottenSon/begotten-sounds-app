@@ -33,6 +33,10 @@
                 <h2>D. Brown the Begotten Son</h2>
                 <img src="https://res.cloudinary.com/begottenson/image/upload/c_scale,h_500/v1619630498/Begotten%20Sounds/B_Son_Card_2_yfp0wz.png" alt="Artist D. Brown the Begotten Son" class="artists">
             </section>
+            <section class="bson" on:click={showBegottenMusic}>
+                <h2>Tykillzem</h2>
+                <img src="https://res.cloudinary.com/begottenson/image/upload/c_scale,h_500/v1621343074/Begotten%20Sounds/Ty-web_u1y8y8.png" alt="Tykillzem" class="artists">
+            </section>
     </div>     
     {/if}
 </main>
