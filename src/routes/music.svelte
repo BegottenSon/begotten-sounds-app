@@ -1,6 +1,7 @@
 <script>
     import Transition from "$lib/Transition.svelte";
     import MusicPlayer from "$lib/MusicPlayer/MusicPlayer.svelte";
+    import BSonPlaylist from "$lib/MusicPlayer/Playlist.svelte";
     import { blur } from "svelte/transition";
     import { ring } from "$lib/SVG/artistBKG";
 
@@ -24,7 +25,9 @@
     {#if begottenMusic}
     <div class="music-view" in:blur="{{amount: blurAmount, duration: duration}}">
         <h3 on:click={showBegottenMusic} class="close button">Close</h3>
-        <MusicPlayer />
+        <MusicPlayer>
+            <BSonPlaylist />
+        </MusicPlayer>
     </div>
     {:else}
     <div class="artists-view" in:blur="{{amount: blurAmount, duration: duration}}">

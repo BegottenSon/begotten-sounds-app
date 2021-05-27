@@ -119,8 +119,11 @@
             on:playPause={playPause}
             on:rewind={rewindAudio}
             on:forward={forwardAudio}/>
-        <BSonPlaylist 
-            on:click={handleTrack}/>
+        <!-- <BSonPlaylist 
+            on:click={handleTrack}/> -->
+        <section on:click={handleTrack}>
+            <slot>Track List Coming Soon</slot>
+        </section>
     </div>
     
     
