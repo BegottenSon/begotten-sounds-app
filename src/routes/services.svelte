@@ -1,6 +1,6 @@
 <script>
     import Transition from "$lib/Transition.svelte";
-    import LandingPage from "$lib/LandingPage.svelte";
+    import LandingPage from "$lib/funnels/LandingPage.svelte";
 </script>
 <Transition>
 <main>

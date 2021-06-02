@@ -23,6 +23,7 @@
     "@fontsource/fira-mono": "^4.2.2",
     "@lukeed/uuid": "^2.0.0",
     "cookie": "^0.4.1",
-    "pnpm": "^6.3.0"
+    "pnpm": "^6.3.0",
+    "stripe": "^8.150.0"
   }
 }

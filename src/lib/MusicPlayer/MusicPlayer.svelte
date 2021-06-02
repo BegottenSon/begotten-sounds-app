@@ -1,5 +1,4 @@
 <script>
-    import BSonPlaylist from "./Playlist.svelte";
     import { playlist } from "./BSonPlaylist.js";
     import Controls from "./Controls.svelte";
 
@@ -46,7 +45,6 @@
     let trackTimer;
 
     function updateTime() {
-        // totalTrackTime = audio.duration
         progress = audio.currentTime * (100 / totalTrackTime);
 
         let currHrs = Math.floor((audio.currentTime / 60) / 60);
@@ -119,6 +117,7 @@
             on:playPause={playPause}
             on:rewind={rewindAudio}
             on:forward={forwardAudio}/>
+
         <!-- <BSonPlaylist 
             on:click={handleTrack}/> -->
         <section on:click={handleTrack}>
