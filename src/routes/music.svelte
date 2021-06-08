@@ -2,8 +2,8 @@
     import Transition from "$lib/Transition.svelte";
     import MusicPlayer from "$lib/MusicPlayer/MusicPlayer.svelte";
     import BSonPlaylist from "$lib/MusicPlayer/Playlist.svelte";
+    import { images } from "$lib/image-links/images";
     import { blur } from "svelte/transition";
-    import { ring } from "$lib/SVG/artistBKG";
 
     let begottenMusic = false;
 
@@ -35,11 +35,11 @@
         <div class="artists-list">
            <section class="bson" on:click={showBegottenMusic}>
                 <h2>D. Brown the Begotten Son</h2>
-                <img src="https://res.cloudinary.com/begottenson/image/upload/c_scale,h_500/v1619630498/Begotten%20Sounds/B_Son_Card_2_yfp0wz.png" alt="Artist D. Brown the Begotten Son" class="artists">
+                <img src={images.bSonCard1} alt="Artist D. Brown the Begotten Son" class="artists">
             </section>
             <section class="tykillzem" on:click={showBegottenMusic}>
                 <h2>Tykillzem</h2>
-                <img src="https://res.cloudinary.com/begottenson/image/upload/c_scale,h_500/v1621343074/Begotten%20Sounds/Ty-web_u1y8y8.png" alt="Tykillzem" class="artists">
+                <img src={images.tyCard1} alt="Tykillzem" class="artists">
             </section> 
         </div>        
     </div>     
