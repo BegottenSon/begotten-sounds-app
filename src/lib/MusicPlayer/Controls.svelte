@@ -49,20 +49,22 @@
         display: grid;
         place-items: center;
     }
+
     h2 {
-        background-image: var(--gradient);
-        background-color: var(--yellow);
+        border: 2px solid var(--yellow);
         border-radius: 8px;
-        color: var(--dark);
+        color: var(--white);
         padding: 0.4em;
         width: 70%;
     }
+    
     /* CONTROLS */
     .controls {
         display: flex;
         justify-content: space-between;
         justify-self: normal;
     }
+
     button {
         background-color: transparent;
         background-image: none;

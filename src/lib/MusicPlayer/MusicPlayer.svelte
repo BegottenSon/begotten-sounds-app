@@ -1,6 +1,6 @@
 <script>
-    import { playlist } from "./BSonPlaylist.js";
     import Controls from "./Controls.svelte";
+    import { playlist } from "./BSonPlaylist.js";
     import { images } from "../image-links/images";
 
     export let albumCover = images.bSonThrone300;
