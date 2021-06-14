@@ -3,11 +3,13 @@
     import MusicPlayer from "$lib/MusicPlayer/MusicPlayer.svelte";
     import BSonPlaylist from "$lib/MusicPlayer/Playlist.svelte";
     import TyPlaylist from "$lib/MusicPlayer/TyPlaylist.svelte";
+    import { playlist } from "$lib/MusicPlayer/tyPlaylist";
     import { images } from "$lib/image-links/images";
     import { blur } from "svelte/transition";
 
     let begottenMusic = false;
     let tyMusic = false;
+    let tyMusicPlaylist = playlist;
 
     let toggleBegottenMusic = () =>  begottenMusic = !begottenMusic;
     let toggleTyMusic = () => tyMusic = !tyMusic;
@@ -33,7 +35,7 @@
     {:else if tyMusic}
     <div class="music-view" in:blur="{{amount: blurAmount, duration: duration}}">
         <h3 on:click={toggleTyMusic} class="close button">Close</h3>
-        <MusicPlayer albumCover = {images.atlasRemoved}>
+        <MusicPlayer albumCover = {images.atlasRemoved} musicPlaylist = {tyMusicPlaylist}>
             
             <TyPlaylist />
         </MusicPlayer>

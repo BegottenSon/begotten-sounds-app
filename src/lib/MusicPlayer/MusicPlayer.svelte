@@ -4,23 +4,23 @@
     import { images } from "../image-links/images";
 
     export let albumCover = images.bSonThrone300;
-
+    export let musicPlaylist = playlist;
     // GET TRACK
     let trackIndex = 0;
-    let audio = new Audio(playlist[trackIndex].url);
-    let trackTitle = playlist[trackIndex].title;
+    let audio = new Audio(musicPlaylist[trackIndex].url);
+    let trackTitle = musicPlaylist[trackIndex].title;
 
     const loadTrack = () => {
-        audio = new Audio(playlist[trackIndex].url);
+        audio = new Audio(musicPlaylist[trackIndex].url);
         audio.onloadedmetadata = () => {
             totalTrackTime = audio.duration;
             updateTime();
         }
-        trackTitle = playlist[trackIndex].title;
+        trackTitle = musicPlaylist[trackIndex].title;
     }
 
     const autoPlayNextTrack = () => {
-        if(trackIndex <= playlist.length - 1) {
+        if(trackIndex <= musicPlaylist.length - 1) {
             trackIndex += 1;
             loadTrack();
             audio.play();
