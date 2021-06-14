@@ -2,14 +2,15 @@
     import Transition from "$lib/Transition.svelte";
     import MusicPlayer from "$lib/MusicPlayer/MusicPlayer.svelte";
     import BSonPlaylist from "$lib/MusicPlayer/Playlist.svelte";
+    import TyPlaylist from "$lib/MusicPlayer/TyPlaylist.svelte";
     import { images } from "$lib/image-links/images";
     import { blur } from "svelte/transition";
 
     let begottenMusic = false;
+    let tyMusic = false;
 
-    function showBegottenMusic() {
-        begottenMusic = !begottenMusic
-    }
+    let toggleBegottenMusic = () =>  begottenMusic = !begottenMusic;
+    let toggleTyMusic = () => tyMusic = !tyMusic;
 
     let blurAmount = 6;
     let duration = 200;
@@ -24,20 +25,28 @@
 
     {#if begottenMusic}
     <div class="music-view" in:blur="{{amount: blurAmount, duration: duration}}">
-        <h3 on:click={showBegottenMusic} class="close button">Close</h3>
+        <h3 on:click={toggleBegottenMusic} class="close button">Close</h3>
         <MusicPlayer>
             <BSonPlaylist />
+        </MusicPlayer>
+    </div>
+    {:else if tyMusic}
+    <div class="music-view" in:blur="{{amount: blurAmount, duration: duration}}">
+        <h3 on:click={toggleTyMusic} class="close button">Close</h3>
+        <MusicPlayer albumCover = {images.atlasRemoved}>
+            
+            <TyPlaylist />
         </MusicPlayer>
     </div>
     {:else}
     <div class="artists-view" in:blur="{{amount: blurAmount, duration: duration}}">
         <h3>Choose The Artist Below</h3>
         <div class="artists-list">
-           <section class="bson" on:click={showBegottenMusic}>
+           <section class="bson" on:click={toggleBegottenMusic}>
                 <h2>D. Brown the Begotten Son</h2>
                 <img src={images.bSonCard1} alt="Artist D. Brown the Begotten Son" class="artists">
             </section>
-            <section class="tykillzem" on:click={showBegottenMusic}>
+            <section class="tykillzem" on:click={toggleTyMusic}>
                 <h2>Tykillzem</h2>
                 <img src={images.tyCard1} alt="Tykillzem" class="artists">
             </section> 

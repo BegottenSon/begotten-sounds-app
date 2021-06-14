@@ -1,6 +1,9 @@
 <script>
     import { playlist } from "./BSonPlaylist.js";
     import Controls from "./Controls.svelte";
+    import { images } from "../image-links/images";
+
+    export let albumCover = images.bSonThrone300;
 
     // GET TRACK
     let trackIndex = 0;
@@ -111,15 +114,14 @@
 </script>
 
 <main>
-    <img src="https://res.cloudinary.com/begottenson/image/upload/c_scale,h_300/v1619630123/Begotten%20Sounds/BSon-on-throne_tqtm8x.jpg" alt="Begotten Son">
+    <img src={albumCover} alt="Begotten Son">
     <div>
         <Controls {isPlaying} {trackTitle} {currentTimeDisplay} {totalTimeDisplay} {progress} 
             on:playPause={playPause}
             on:rewind={rewindAudio}
             on:forward={forwardAudio}/>
 
-        <!-- <BSonPlaylist 
-            on:click={handleTrack}/> -->
+
         <section on:click={handleTrack}>
             <slot>Track List Coming Soon</slot>
         </section>
@@ -138,12 +140,14 @@
 
     img {
         border-radius: 8px;
-        /* height: 30vh; */
+        height: 300px;
     }
 
     div {
-        border: solid 2px var(--grey);
-        border-radius: 8px;
+        background-color: var(--dark);
+        box-shadow: inset 0 0 10px 1px rgb(12, 4, 9);
+        background-image: radial-gradient(#0f0e0e, #1a1a1a);
+        border-radius: 12px;
         padding: 1em;
         width: 60vw;
     }
