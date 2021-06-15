@@ -78,7 +78,8 @@
             font-size: 0.7em;
             left: 0;
             justify-content: space-evenly;
-            padding-block: 0.5em 1.4em;
+            /* padding-block: 0.5em 1.4em; */
+            padding-bottom: calc(1rem + env(safe-area-inset-bottom));
             position: fixed;
             width: 100%;
         }

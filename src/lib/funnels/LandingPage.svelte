@@ -2,7 +2,6 @@
     import FunnelButton from "./FunnelButton.svelte";
     import MixForm from "../forms/MixForm.svelte";
     import { images } from "../image-links/images";
-    let link = "/music";
 </script>
 <section>
     <h1>
@@ -12,7 +11,7 @@
         <slot name="tagline">Time to get you music soundng right</slot>
     </h3>
     <div class="btn">
-    <FunnelButton {link}>
+    <FunnelButton>
         <span slot="cta">Yes! I want my free mix</span>
         <span slot="details"> Receive an email to upload your song for a FREE mix of a section of your song</span>
     </FunnelButton>    
@@ -50,5 +49,11 @@
         object-position: 0% 30%;
         width: 100%;
         height: 30vh;
+    }
+
+    @media(max-width: 480px) {
+        section {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
     }
 </style>
