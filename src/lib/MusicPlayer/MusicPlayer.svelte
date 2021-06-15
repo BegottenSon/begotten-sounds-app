@@ -156,5 +156,9 @@
         main {
             margin-bottom: 2em;
         }
+
+        div {
+            width: 75vw;
+        }
     }
 </style>

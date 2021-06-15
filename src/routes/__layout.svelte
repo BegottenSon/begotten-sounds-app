@@ -16,10 +16,10 @@
 		align-items: center;
 		box-sizing: border-box;
 		display: grid;
-		justify-content: center;
+		/* justify-content: center; */
 		margin: 0 auto;
 		overflow-x: hidden;
-		padding: 1em;
+		/* padding: 1em; */
 		width: 100%;
     }
 </style>

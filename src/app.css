@@ -17,6 +17,7 @@ body {
     background-color: var(--dark);
     color: var(--white);
     font-family: 'Roboto';
+    margin: 0;
 }
 
 h1 {
