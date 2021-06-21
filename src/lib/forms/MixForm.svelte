@@ -1,45 +1,47 @@
 <script>
-    const klaviyo_API = 'https://a.klaviyo.com/api/v2/list/Yra3hD/subscribe?api_key=pk_5ae8611bb3e4a7ce8fed257a5508a897f4'
-    let email = "";
-    let fName = "";
-    let lName = "";
 
-    const options = {
-        method: 'POST',
-        headers: {Accept: 'application/json', 'Content-Type': 'application/json'},
-        body: JSON.stringify({
-            profiles: [
-                {first_name: fName},
-                {last_name: lName},
-                {email: email}
-            ]
-        })
-    };
-
-    function postData() {
-        if(email !=="") {
-            fetch(klaviyo_API, options)
-            .then(response => response.json())
-            .then(response => console.log(response))
-            .catch(err => console.error(err));    
-        }      
-    }
 </script>
+  
+<form action="https://www.getdrip.com/forms/545791232/submissions" method="post" data-drip-embedded-form="545791232" id="drip-ef-545791232">
+    <div data-drip-attribute="description"><strong>Let's Keep In Touch!</strong><br>
+    <br>
+    Sign up to stay informed on the latest news and exclusive offers.&nbsp;</div>
 
-<section>
-    <form on:submit|preventDefault={postData}>
-        <label for="fname">First Name:</label>
-        <input type="text" id="fname" name="fname" bind:value={fName}>
 
-        <label for="lname">Last Name:</label>
-        <input type="text" id="lname" name="lname" bind:value={lName}>
+    <div>
+        <label for="drip-first-name">First Name</label><br>
+        <input type="text" id="drip-first-name" name="fields[first_name]" value="">
+    </div>
 
-        <label for="email">Email:</label>
-        <input type="text"  name="email" bind:value={email}>
+    <div>
+        <label for="drip-email">Email Address</label><br>
+        <input type="email" id="drip-email" name="fields[email]" value="">
+    </div>
 
-        <button type=submit>Sign Up!</button>
-    </form>
-</section>
+    <div>
+        <label for="drip-pro-skills">Pro Skills</label><br>
+        <select name="fields[pro_skills]">
+            <option disabled="" selected="" value="">Select an option</option>
+            <option value="Producer">Producer</option>
+            <option value="Artists">Artists</option>
+            <option value="Both">Both</option>
+        </select>
+    </div>
+
+
+    <div style="display: none;" aria-hidden="true">
+        <label for="website">Website</label><br>
+        <input type="text" id="website" name="website" tabindex="-1" autocomplete="false" value="">
+    </div>
+
+    <div>
+        <input type="submit" value="Sign Up" data-drip-attribute="sign-up-button">
+    </div>
+</form>
+  
+  
+  
+  
 
 <style>
     section {

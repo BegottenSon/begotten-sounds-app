@@ -20,7 +20,6 @@
       <MixForm />  
     </div>
     
-    <!-- <div class="klaviyo-form-Ue7T5f"></div> -->
     
     <img src={images.bSonThrone} alt="Begotten Son sitting on a throne" class="full-bleed">
     <p>We need to get this together so we can have someting to post</p>

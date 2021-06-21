@@ -7,7 +7,21 @@
 
 <main>
 	<slot></slot>
-	<script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=VPRkrp"></script>
+	<!-- Drip -->
+	<script type="text/javascript">
+		var _dcq = _dcq || [];
+		var _dcs = _dcs || {};
+		_dcs.account = '2600038';
+	
+		(function() {
+		var dc = document.createElement('script');
+		dc.type = 'text/javascript'; dc.async = true;
+		dc.src = '//tag.getdrip.com/2600038.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(dc, s);
+		})();
+	</script>
+  <!-- end Drip -->  
 </main>
 
 
@@ -16,10 +30,8 @@
 		align-items: center;
 		box-sizing: border-box;
 		display: grid;
-		/* justify-content: center; */
 		margin: 0 auto;
 		overflow-x: hidden;
-		/* padding: 1em; */
 		width: 100%;
     }
 </style>
